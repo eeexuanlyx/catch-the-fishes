@@ -13,7 +13,6 @@ let score = 0;
 let message = "";
 let bait = "10";
 let timeUp = false;
-let currentHole = "";
 let gameStarted = false;
 let gameOver = false;
 /*----- Cached Element References  -----*/
@@ -25,11 +24,10 @@ function init() {
   message = "";
   bait = 10;
   timeUp = false;
-  currentHole = "";
   gameStarted = false;
   gameOver = false;
   render();
-  messageElement.textContent = "Loading Complete, begin catching!";
+  messageElement.textContent = "Click Start to begin!";
   baitElement.textContent = 10;
   scoreElement.textContent = 0;
 }
@@ -89,7 +87,7 @@ function pauseGame() {
 
 function fishAppears() {
   const time = randomTime(300, 1000);
-  const idx = Math.floor(Math.random() * holesElement.length);
+  const idx = Math.floor(Math.random() * holesElement.length); //to spawn fish randomly
   holesElement[idx].classList.add("fish");
   setTimeout(() => {
     holesElement[idx].classList.remove("fish");
@@ -113,12 +111,6 @@ function handleFishClick(e) {
       scoreElement.textContent = score;
     }
     render();
-  }
-}
-
-function checkScore() {
-  if (score === 10) {
-    messageElement.textContent = "You Win!";
   }
 }
 
