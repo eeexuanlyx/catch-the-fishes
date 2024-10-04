@@ -61,8 +61,6 @@ function startGame() {
     gameStarted = true;
     fishAppears();
   }
-  console.log("game over:" + gameOver);
-  console.log("game started:" + gameStarted);
 }
 
 function resetGame() {

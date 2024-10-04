@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -8,14 +11,14 @@
     <title>Catch The Fish</title>
   </head>
   <body>
-    <h1>Catch The Fish</h1>
+    <h1 id="t1">Catch The Fish</h1>
 
     <div class="container">
       <div class="c1">
         <h2 id="message"><p>Message</p></h2>
       </div>
       <div class="c2">
-        <h2>Baits(s):</h2>
+        <h2>Bait:</h2>
         <h2 id="bait"><p>10</p></h2>
       </div>
       <div class="c3">
@@ -24,17 +27,31 @@
       </div>
     </div>
 
-    <section class="holes">
-      <div class="hole" id="hole1"></div>
-      <div class="hole" id="hole2"></div>
-      <div class="hole" id="hole3"></div>
-      <div class="hole" id="hole4"></div>
-      <div class="hole" id="hole5"></div>
-      <div class="hole" id="hole6"></div>
-      <div class="hole" id="hole7"></div>
-      <div class="hole" id="hole8"></div>
-      <div class="hole" id="hole9"></div>
-    </section>
+    <div class="container 2">
+      <section class="holes">
+        <div class="hole" id="hole1"></div>
+        <div class="hole" id="hole2"></div>
+        <div class="hole" id="hole3"></div>
+        <div class="hole" id="hole4"></div>
+        <div class="hole" id="hole5"></div>
+        <div class="hole" id="hole6"></div>
+        <div class="hole" id="hole7"></div>
+        <div class="hole" id="hole8"></div>
+        <div class="hole" id="hole9"></div>
+      </section>
+
+      <section class="instructions">
+        <h2>How To Play:</h2>
+        <p>
+          <ul>
+          <li>Click Start to begin. </li>
+          <li>You have 10 baits. </li> 
+          <li>Catch at least 5 fishes to
+          win!</li>
+          </ul>
+        </p>
+      </section>
+    </div>
 
     <div class="button">
       <button class="button-start">Start</button>
