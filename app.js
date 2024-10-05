@@ -23,13 +23,12 @@ function init() {
   score = 0;
   message = "";
   bait = 10;
-  timeUp = false;
   gameStarted = false;
   gameOver = false;
   render();
-  messageElement.textContent = "Click Start to begin!";
   baitElement.textContent = 10;
   scoreElement.textContent = 0;
+  messageElement.textContent = "Click Start to begin!";
 }
 
 function render() {
@@ -50,13 +49,14 @@ function updateMessage() {
 }
 
 function startGame() {
-  if (gameStarted === false) {
+  if (!gameStarted) {
     init();
     gameStarted = true;
     fishAppears();
   }
-  if (gameOver === true && gameStarted === false) {
-    //if game not started, then the start button can be clicked
+  if (gameOver && !gameStarted) {
+    //If game not started, then the start button can be clicked
+    //Prevents clicking of start button twice
     init();
     gameStarted = true;
     fishAppears();
@@ -85,11 +85,11 @@ function pauseGame() {
 
 function fishAppears() {
   const time = randomTime(300, 1000);
-  const idx = Math.floor(Math.random() * holesElement.length); //to spawn fish randomly
+  const idx = Math.floor(Math.random() * holesElement.length);
   holesElement[idx].classList.add("fish");
   setTimeout(() => {
     holesElement[idx].classList.remove("fish");
-    if (!timeUp && gameOver === false) fishAppears();
+    if (!gameOver) fishAppears();
   }, time);
 }
 
@@ -97,8 +97,10 @@ function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
+//reduce the bait whenever the user attemps to catch
+//if user catches the fish, 1 point is added
 function handleFishClick(e) {
-  if (gameOver === false) {
+  if (!gameOver) {
     if (bait !== 0) {
       bait -= 1;
     }
