@@ -39,7 +39,7 @@ function updateMessage() {
   if (bait === 0 && score < 5) {
     gameOver = true;
     gameStarted = false;
-    messageElement.textContent = "Game Over, you lose!";
+    messageElement.textContent = "Game Over, you lose! Try again?";
   }
   if (score > 4) {
     gameOver = true;
@@ -109,6 +109,9 @@ function handleFishClick(e) {
       score += 1;
       this.classList.remove("fish");
       scoreElement.textContent = score;
+      messageElement.textContent = "Great Catch!";
+    } else {
+      messageElement.textContent = "Aww... you missed!";
     }
     render();
   }

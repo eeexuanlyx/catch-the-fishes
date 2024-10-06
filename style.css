@@ -13,7 +13,7 @@ body {
 #t1 {
   font-size: 2.5rem;
   color: rgb(255, 196, 58);
-  text-shadow: 3px 3px 0 black, -1px -1px 0 black;
+  text-shadow: 3px 3px 0 black;
 }
 
 .h1 {
@@ -24,7 +24,6 @@ body {
 
 .h2 {
   font-family: "Pacifico", sans-serif;
-  font-size: 1rem;
   color: black;
 }
 
@@ -34,7 +33,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .container2 {
