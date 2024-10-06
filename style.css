@@ -136,8 +136,7 @@ body {
 }
 
 .fish {
-  background: url("https://cdn-icons-png.flaticon.com/512/9986/9986238.png")
-    no-repeat;
+  background: url("clownfish.png") no-repeat;
   content: "fish-image";
   background-size: contain;
   display: block;

@@ -21,6 +21,6 @@ Further features to this game such as variety of fish species, map size and game
 Resources:
 [CSS Buttons](https://getcssscan.com/css-buttons-examples) | [Google Fonts](https://fonts.google.com/selection/embed) |
 [Whack-A-Mole](https://www.codewithfaraz.com/content/391/create-a-whack-a-mole-game-with-html-css-and-javascript-step-by-step-guide) |
-[Fish Image](https://cdn-icons-png.flaticon.com/512/9986/9986238.png) |
+[Fish Image](https://www.freepik.com/) |
 [Image Generator](https://gemini.google.com/app) |
 [Game Inspiration](https://www.calculators.org/games/whack-em-all/) | [Icons](https://fontawesome.com/)
