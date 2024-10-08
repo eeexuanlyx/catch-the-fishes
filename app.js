@@ -69,16 +69,20 @@ function resetGame() {
 }
 
 function pauseGame() {
-  switch (pauseButtonElement.textContent) {
-    case "Pause":
+  switch (pauseButtonElement.textContent.toLowerCase()) {
+    case "pause":
       gameOver = true; //to pause fishes from coming out
       pauseButtonElement.textContent = "Resume";
+      resetButtonElement.disabled = true;
+      messageElement.textContent = "Game Paused, click resume!";
       break;
-    case "Resume":
+    case "resume":
       gameOver = false;
       // to spawn the fish again
       fishAppears();
       pauseButtonElement.textContent = "Pause";
+      resetButtonElement.disabled = false;
+      messageElement.textContent = "Game Resumed, continue catching!";
       break;
   }
 }
