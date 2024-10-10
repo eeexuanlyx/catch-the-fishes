@@ -3,7 +3,6 @@ const holesElement = document.querySelectorAll(".hole");
 const scoreElement = document.querySelector("#score");
 const messageElement = document.querySelector("#message");
 const baitElement = document.querySelector("#bait");
-const timerElement = document.querySelector("#timer");
 const startButtonElement = document.querySelector(".button-start");
 const pauseButtonElement = document.querySelector(".button-pause");
 const resetButtonElement = document.querySelector(".button-reset");
@@ -12,10 +11,8 @@ const resetButtonElement = document.querySelector(".button-reset");
 let score = 0;
 let message = "";
 let bait = "10";
-let timeUp = false;
 let gameStarted = false;
 let gameOver = false;
-/*----- Cached Element References  -----*/
 
 /*-------------- Functions -------------*/
 

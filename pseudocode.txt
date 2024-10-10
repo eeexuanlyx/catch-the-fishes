@@ -1,0 +1,30 @@
+-player given 10 baits and have to catch minimum 5 fishes to win the game
+
+Constants: hole, score, message, bait element, start/pause/reset buttons
+
+State variables: score, message, bait count, game started and game over
+
+
+Event listeners: 
+- for holes , each click to handle fish click, 
+
+- for the buttons:
+
+*start, create function for fishes to appear randomly (random holes and random time) by adding new class list which has the fish image
+
+*pause (change gameOver variable to true to stop fishes from spawning)
+
+*resume (change gameOver variable to false so that spawning of the fishes can be called)
+
+*reset button ( intialize the game and sets gameOver to true to stop fishes from spawning)
+
+
+init function to intialize all the state variables
+
+wait for user to click (handle click , update score, update bait count)
+render function to update message
+
+
+ 
+
+
